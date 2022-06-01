@@ -35,4 +35,4 @@ connection.query(query, data, (err, result) => {
 });
 }
 
-module.exports = register;
+module.exports = {register};
