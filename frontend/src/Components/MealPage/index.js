@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { setMeals } from "../../redux/reducers/meals";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -6,6 +6,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const MealPage = () => {
+  const [comment, setComment] = useState("")
   const { id } = useParams();
   const dispatch = useDispatch();
   const { meals } = useSelector((state) => {
@@ -39,7 +40,7 @@ const MealPage = () => {
               />
               <button
                 onClick={() => {
-                  dispatch(addNewComment(product._id));
+                  // dispatch(addNewComment(meal._id));
                 }}
               >
                 Add comment
