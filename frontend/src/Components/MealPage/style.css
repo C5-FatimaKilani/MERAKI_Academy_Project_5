@@ -193,11 +193,40 @@ div {
 }
 
 @media only screen and (max-width: 720px) {
+  /* on iphone SE */
   .page {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
 .meal_page {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+.meal_img {
+  width: 300px;
+  height: 290px;
+  border: 2px solid #fff;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+.meal_comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: space-between; */
 }
 }
