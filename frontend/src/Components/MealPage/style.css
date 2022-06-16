@@ -191,3 +191,13 @@ div {
   justify-content: space-between;
   align-items: baseline;
 }
+
+@media only screen and (max-width: 720px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+
+.meal_page {
+}
+}
