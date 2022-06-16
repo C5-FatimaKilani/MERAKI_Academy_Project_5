@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="logo">
         <img
        
-          src="https://o.remove.bg/downloads/39827fb6-3b8e-4ac1-b62a-9ec3746764d8/95093528_925008204596091_3051705487943794688_n-removebg-preview.png"
+          src="https://www.linkpicture.com/q/LPic62ab6f2a7b4fb753102494.jpg"
           width={"170px"} height={"150px"} onClick={()=>{navigate("/")}}
         />
       </div>
@@ -143,9 +143,11 @@ const Navbar = () => {
           
           </Link>
           </div>
+          
+        </div>
+        <div className="search_filter">
           <Filter />
         </div>
-        
       </nav>
     </div>
   );
