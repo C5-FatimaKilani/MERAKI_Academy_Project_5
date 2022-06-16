@@ -129,7 +129,7 @@ const Navbar = () => {
           ) : (
             ""
           )}
-        <div className="links">
+        <div className="aboutUs">
           <Link
             to={"/aboutus"}
             onClick={() => {
@@ -145,9 +145,9 @@ const Navbar = () => {
           </div>
           
         </div>
-        <div className="search_filter">
-          <Filter />
-        </div>
+    <div className="search_filter">
+          <Filter /></div>
+      
       </nav>
     </div>
   );

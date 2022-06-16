@@ -26,6 +26,7 @@ const Filter = () => {
       <div className="dropInput">
       <input
       className="search_input"
+      placeholder="إبحث هنا ..."
         value={inputVal}
         onChange={(e) => {
           setInputVal(e.target.value);
