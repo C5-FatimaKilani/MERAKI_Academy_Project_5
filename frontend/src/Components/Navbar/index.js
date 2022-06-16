@@ -40,7 +40,8 @@ const Navbar = () => {
     <div className="navbar">
       <div className="logo">
         <img
-          src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/95093528_925008204596091_3051705487943794688_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHauKD1lKQ1B_JKeY4f5g_SZiv_hMWAs6ZmK_-ExYCzpv595L_1JAZxtur3jyOmd6CLiQtzOo2DKzu355CRzvfx&_nc_ohc=AUoj-2sVlp4AX8EsSxu&_nc_ht=scontent-frt3-1.xx&oh=00_AT8EmOIbtDsEYK9l55H0K7Z_XTssHwMKZ3OWcS71J7kbvA&oe=62C3D0FA"
+       
+          src="https://o.remove.bg/downloads/39827fb6-3b8e-4ac1-b62a-9ec3746764d8/95093528_925008204596091_3051705487943794688_n-removebg-preview.png"
           width={"170px"} height={"150px"} onClick={()=>{navigate("/")}}
         />
       </div>

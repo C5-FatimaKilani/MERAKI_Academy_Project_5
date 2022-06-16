@@ -1,11 +1,19 @@
+
 .navbar{
   z-index: 9999;
   display: flex;
-  background-color:#252222 ;
+  /* background-color:rgb(224, 188, 188) ; */
+  padding-left: 1.5%;
+  padding-right: 0.5%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  /* background-image: url(https://wallpaperaccess.com/full/1549130.jpg); */
+  background-color:white;
 }
+
+
 .navbar .logo img{
-  margin :10%;
-  margin-right: 20%;
+  margin :7%;
+  margin-right: 10%;
   border-radius: 30%;
   margin-left:5vw
 }
@@ -15,13 +23,15 @@ nav{
 
 nav .menu{
   display: flex;
-  margin-top: 14vh;
+  margin-top: 10vh;
   
 }
 .menu a ,.dropdown p{
   margin-left: 5vw;
   margin-right: 5vw;
-  color: #70b269;
+  color:#3e8e41;
+  font-weight: bold;
+  font-size: larger;
   text-decoration: none;
 }
 
@@ -53,3 +63,4 @@ nav .menu{
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+ 

@@ -25,6 +25,7 @@ const Filter = () => {
     <div className="dropdown">
       <div className="dropInput">
       <input
+      className="search_input"
         value={inputVal}
         onChange={(e) => {
           setInputVal(e.target.value);
