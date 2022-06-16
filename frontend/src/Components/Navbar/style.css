@@ -63,4 +63,57 @@ nav .menu{
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
- 
+  @media only screen and (max-width: 920px) { 
+    .navbar{
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 3%;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+     
+      background-color:white;
+    }
+    nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -37%;
+    }
+    
+    nav .menu{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 14vh;
+      
+    }
+    .menu a ,.dropdown p{
+      margin-left: 5vw;
+      margin-right: 5vw;
+      color: #70b269;
+      text-decoration: none;
+
+    }
+
+.dropdown{
+  padding-top: 1%;
+
+}
+
+ div.links{
+  display: flex;
+  flex-direction: column;
+align-items: center;
+}
+
+.navbar .logo img{
+  margin :7%;
+  margin-right: 10%;
+  border-radius: 30%;
+  margin-left:5vw;
+  height:70%;
+  width: 70%;
+  
+}
+  }
