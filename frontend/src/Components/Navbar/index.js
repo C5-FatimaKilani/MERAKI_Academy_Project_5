@@ -80,7 +80,10 @@ const Navbar = () => {
 
           {!isLoggedIn ? (
             <div className="links">
+              <div className="new">
+              <div className="mediaReg">
               <Link
+              className=""
                 to={"/register"}
                 onClick={() => {
                   dispatch(changePage(1));
@@ -88,7 +91,10 @@ const Navbar = () => {
               >
                 تسجيل مستخدم جديد
               </Link>
+              </div>
+              <div className="mediaLog">
               <Link
+              className=""
                 to={"/login"}
                 onClick={() => {
                   dispatch(changePage(1));
@@ -96,6 +102,8 @@ const Navbar = () => {
               >
                 تسجيل الدخول
               </Link>
+              </div>
+              </div>
             </div>
           ) : (
             ""

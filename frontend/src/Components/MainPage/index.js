@@ -2,8 +2,13 @@
 import "./style.css"
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { changePage } from "../../redux/reducers/page/pageReducer";
+
 const MainPage=()=>{
+  const dispatch = useDispatch();
+
     const [meal, setMeal] = useState([]);
     const { meals, page } = useSelector(
         (state) => {
@@ -20,15 +25,37 @@ const MainPage=()=>{
     .then((result) => {
       setMeal(result.data.result);
     })
-    .catch((err) => {});
-}, [page]);
+    .catch((err) => {throw err});
+}, []);
 
 return(
     <div className="mainpage">
 
-   
-    </div>
-)
-}
+{meals.length &&
+              meals.map((meal, index) => {
+              return (
+               
+                 
+                  <Link
+                      to={`/meals/${meal.id}`}
+                      onClick={() => {
+                        dispatch(changePage(1));
+                      }}
+                    >
+                      <img
+                        src={meal.image}
+                        alt=""
+                        key={meal.id}
+                        width={"150px"}
+                      />
+                    </Link>
+               )
+                    
+                  })
+       }                             
+  </div>  
+
+) 
+}       
 
 export default MainPage
