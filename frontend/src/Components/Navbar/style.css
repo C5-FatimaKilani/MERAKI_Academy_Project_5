@@ -1,131 +1,143 @@
-
-.navbar{
+.navbar {
   z-index: 9999;
   display: flex;
   /* background-color:rgb(224, 188, 188) ; */
   padding-left: 1.5%;
   padding-right: 0.5%;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   /* background-image: url(https://wallpaperaccess.com/full/1549130.jpg); */
-  background-color:#252222;
+  background-color: #252222;
 }
 
-
-.navbar .logo img{
-  margin :7%;
+.navbar .logo img {
+  margin: 7%;
   margin-right: 10%;
   border-radius: 30%;
-  margin-left:5vw
+  margin-left: 5vw;
 }
-nav{
+nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
   flex-direction: column;
+  margin-right: 0%;
+  margin-left: -1%;
+  padding-right: 0%;
 }
 
-nav .menu{
+nav .menu {
   display: flex;
   margin-top: 10vh;
-  
 }
-.menu a ,.dropdown p{
-  margin-left: 5vw;
-  margin-right: 5vw;
-  color:#3e8e41;
-  font-weight: bold;
-  font-size: larger;
+.menu a,
+.dropdown p {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  color: #3e8e41;
+  /* font-weight: bold; */
+  font-size: 85%;
   text-decoration: none;
 }
+.without_search{
 
- .links{
   display: flex;
 }
-  .aboutUs{
+.links {
+  display: flex;
+}
+.about_us {
+  display: flex;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: fit-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 17%;
+  right: 19%;
+  cursor: pointer;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  margin-right: 2%;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 920px) {
+  .navbar {
+    z-index: 9999;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(9, 138, 84, 0.22);
+
+    background-color: #252222;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -37%;
     
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    width: fit-content;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top:17%;
-    right: 19%;
+
+  nav .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20vh;
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+
+  .links a{
+    display: flex;
+  }
+
+  .new {
+    display: flex;
+  }
+  .menu a,
+  .dropdown p {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: #70b269;
     text-decoration: none;
-    display: block;
-    margin-right: 2%;
+    font-size: smaller;
   }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-  @media only screen and (max-width: 920px) { 
-    .navbar{
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 3%;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(9, 138, 84, 0.22);
-     
-      background-color:#252222;
-
-    }
-     nav{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: -37%;
-    }
-    
-   nav .menu{
-      display: flex;
-      /* flex-direction: column; */
-      align-items: center;
-      margin-top: 20vh;
- }
-
- .links{
+.without_search{
   display: flex;
-   }
+  /* flex-direction: column; */
+}
+  .dropdown {
+    padding-top: 5%;
+  }
 
-   .new{
+  div.links {
     display: flex;
-   }
-    .menu a ,.dropdown p{
-      margin-left: 5vw;
-      margin-right: 5vw;
-      color: #70b269;
-      text-decoration: none;
-      font-size: smaller;
-
-    }
-
-.dropdown{
-  padding-top: 5%;
-  
-
-
+    flex-direction: row;
+    align-items: center;
+  }
 }
-
- div.links{
-  display: flex;
-  flex-direction: column;
-align-items: center;
-}
-
-  } 

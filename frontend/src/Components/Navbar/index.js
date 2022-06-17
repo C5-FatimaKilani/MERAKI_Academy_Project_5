@@ -55,98 +55,108 @@ const Navbar = () => {
 
         <nav>
           <div className="menu">
-            <div className="dropdown">
-              <p className="dropbtn" to={""} onMouseOver={getCategories}>
-                القائمة
-              </p>
-              {categories.length ? (
-                <div className="dropdown-content">
+            <div className="without_search">
+              <div className="dropdown">
+                <p className="dropbtn" to={""} onMouseOver={getCategories}>
+                  القائمة
+                </p>
+                {categories.length ? (
+                  <div className="dropdown-content">
+                    <Link
+                      to={"/menu"}
+                      onClick={() => {
+                        dispatch(changePage(1));
+                      }}
+                    >
+                      جميع الاصناف
+                    </Link>
+                    {categories.map((element, index) => {
+                      return (
+                        <Link key={element.id} to={`/${element.category_name}`}>
+                          {element.category_name}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              {!isLoggedIn ? (
+                <div className="links">
                   <Link
-                    to={"/menu"}
+                    to={"/register"}
                     onClick={() => {
                       dispatch(changePage(1));
                     }}
                   >
-                    جميع الاصناف
+                    تسجيل مستخدم جديد
                   </Link>
-                  {categories.map((element, index) => {
-                    return (
-                      <Link key={element.id} to={`/${element.category_name}`}>
-                        {element.category_name}
-                      </Link>
-                    );
-                  })}
+                  
+                  <Link
+                    to={"/login"}
+                    onClick={() => {
+                      dispatch(changePage(1));
+                    }}
+                  >
+                    تسجيل الدخول
+                  </Link>
                 </div>
               ) : (
                 ""
               )}
+              {isAdmin ? (
+                <div className="links">
+                  <Link
+                    to={"/adminpanel"}
+                    onClick={() => {
+                      dispatch(changePage(1));
+                    }}
+                  >
+                    لوحة الادارة
+                  </Link>
+                </div>
+              ) : (
+                ""
+              )}
+              {isLoggedIn ? (
+                <div className="links">
+                  <Link
+                    to={"/"}
+                    onClick={() => {
+                      dispatch(logout());
+                      dispatch(changePage(1));
+                    }}
+                  >
+                    تسجيل الخروج
+                  </Link>
+                </div>
+              ) : (
+                ""
+              )}
+              {/* <div className="links"> */}
+              <div className="about_us">
+                <Link
+                  to={"/aboutus"}
+                  onClick={() => {
+                    dispatch(changePage(1));
+                  }}
+                >
+                  من نحن
+                </Link>
+              </div>
+              <div className="cartt">
+                <Link to={"/cart"}>
+                  <FaShoppingCart fontSize="1.2em" title="سلة المشتريات" />
+                </Link>
+              </div>
+              {/* </div> */}
             </div>
 
-            {!isLoggedIn ? (
-              <div className="links">
-                <Link
-                  to={"/register"}
-                  onClick={() => {
-                    dispatch(changePage(1));
-                  }}
-                >
-                  تسجيل مستخدم جديد
-                </Link>
-                <Link
-                  to={"/login"}
-                  onClick={() => {
-                    dispatch(changePage(1));
-                  }}
-                >
-                  تسجيل الدخول
-                </Link>
-              </div>
-            ) : (
-              ""
-            )}
-            {isAdmin ? (
-              <div className="links">
-                <Link
-                  to={"/adminpanel"}
-                  onClick={() => {
-                    dispatch(changePage(1));
-                  }}
-                >
-                  لوحة الادارة
-                </Link>
-              </div>
-            ) : (
-              ""
-            )}
-            {isLoggedIn ? (
-              <div className="links">
-                <Link
-                  to={"/"}
-                  onClick={() => {
-                    dispatch(logout());
-                    dispatch(changePage(1));
-                  }}
-                >
-                  تسجيل الخروج
-                </Link>
-              </div>
-            ) : (
-              ""
-            )}
-            <div className="links">
-              <Link
-                to={"/aboutus"}
-                onClick={() => {
-                  dispatch(changePage(1));
-                }}
-              >
-                من نحن
-              </Link>
-              <Link to={"/cart"}>
-                <FaShoppingCart fontSize="1.2em" title="سلة المشتريات" />
-              </Link>
+            <div className="search_filter">
+              <Filter />
             </div>
-            <Filter />
           </div>
         </nav>
       </div>
