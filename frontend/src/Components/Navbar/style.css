@@ -9,6 +9,9 @@
   background-color: #252222;
 }
 
+.cartt{
+  margin-left:2vh
+}
 .navbar .logo img {
   margin: 7%;
   margin-right: 10%;
@@ -33,11 +36,11 @@ nav .menu {
 }
 .menu a,
 .dropdown p {
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
   color: #3e8e41;
   /* font-weight: bold; */
-  font-size: 85%;
+  font-size: 140%;
   text-decoration: none;
 }
 .without_search{
